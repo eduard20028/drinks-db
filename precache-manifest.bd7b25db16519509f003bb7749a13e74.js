@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bcdfd40112d9ac8afff49491b9420bbb",
+    "revision": "90dfa9601e0f2e303bf24521562d70eb",
     "url": "/drinks-db/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/drinks-db/static/css/2.47e06e2e.chunk.css"
   },
   {
-    "revision": "0f3d5ab79861b6598631",
+    "revision": "328b03f2fc456cfe881f",
     "url": "/drinks-db/static/css/main.fabc8a74.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/drinks-db/static/js/2.1a9043c9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0f3d5ab79861b6598631",
-    "url": "/drinks-db/static/js/main.831bcc20.chunk.js"
+    "revision": "328b03f2fc456cfe881f",
+    "url": "/drinks-db/static/js/main.d75a4270.chunk.js"
   },
   {
     "revision": "172cd0e0fb2d8683a460",
