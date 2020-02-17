@@ -1,9 +1,9 @@
 import React from 'react';
 import { withDrinkService } from '../HOC';
-import DrinkItems from '../DrinkItems';
+import DrinkItemsContainer from '../DrinkItems/';
 const DrinkList = ({getData}) => {
     return (
-        <DrinkItems getData={getData}/>
+        <DrinkItemsContainer getData={getData}/>
     );
 }
 const mapMethodsToProps = (drinkService) => {

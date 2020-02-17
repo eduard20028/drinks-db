@@ -2,7 +2,7 @@
   "name": "sandbox",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://eduard20028.github.io/react-sandbox/",
+  "homepage": "https://eduard20028.github.io/drinks-db/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
