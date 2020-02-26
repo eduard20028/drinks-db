@@ -14,7 +14,7 @@ const Header = () => {
                <div className="container d-flex justify-content-between">
                         <Link className="badge" to="/"><h4>Drinks</h4></Link>
                         <div>
-                            {currentUser &&<Link to="/profile"><FontAwesomeIcon id="icon" icon={faUser} color="#6C757D" size="lg"/></Link>}
+                            {currentUser &&<Link to="/favorite"><FontAwesomeIcon id="icon" icon={faUser} color="#6C757D" size="lg"/></Link>}
                             {currentUser &&<Link to="/drinks"><FontAwesomeIcon id="icon" icon={faCocktail} color="#6C757D" size="lg"/></Link>}
                         </div>
                         <ul className="navbar-nav">

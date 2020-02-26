@@ -1,8 +1,14 @@
 import React from 'react';
 
-const DrinkItems = ({items, refresh, addToFavorite}) => {
-    const win = window.location.href;
-    let title = win.includes('#/drinks')?"Random Drinks":win.includes('#/profile')&&items.length > 0 ? "Your Favorite":"You can add your favorite in Random Drinks";
+const DrinkItems = ({items, refresh, addToFavorite, page}) => {
+   let title;
+    if(page === 'favorite'&&items.length > 0){
+        title = "Your Favorite";
+    }
+    else if(page === 'drink'&&items.length){
+        title = "Random Drinks"
+    }
+    else title = "You can add your favorite in Random Drinks";
 
     return (
         <div className="drink-items">
@@ -10,8 +16,7 @@ const DrinkItems = ({items, refresh, addToFavorite}) => {
                     {title}
                 </h3>
                 <div className="d-flex justify-content-center">
-                {window.location.href.includes('#/drinks')&&
-                <button type="button" className="refresh btn btn-danger" onClick={refresh}><i id="icon" className="fas fa-redo"></i></button>}
+                <button type="button" className="refresh btn btn-danger" onClick={refresh}><i id="icon" className="fas fa-redo"></i></button>
                 </div>
                 <div className="row justify-content-center">
                 {

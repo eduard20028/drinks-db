@@ -56,13 +56,14 @@ export class DrinkItemsContainer extends Component {
     }
     render() {
         const {loading,items} = this.state;
+        const {page} = this.props;
         if(loading){
             return (
                 <div className="d-flex justify-content-center"><Spinner/></div>
             )
         }
         return (
-            <DrinkItems items={items} refresh={this.refresh} addToFavorite={this.addToFavorite}/>
+            <DrinkItems items={items} refresh={this.refresh} addToFavorite={this.addToFavorite} page={page}/>
         );
     }
 }

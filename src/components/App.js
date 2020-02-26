@@ -17,7 +17,7 @@ export default class App extends Component {
             <div className="app">
                 <Route path="/" component={Home} exact/>
                 <PrivateRoute path="/drinks" component={DrinkList} exact/>
-                <PrivateRoute path="/profile" component={FavoriteList} exact/>
+                <PrivateRoute path="/favorite" component={FavoriteList} exact/>
                 <Route path="/login" component={Login} exact/>
                 <Route path="/sign-up" component={SignUp} exact/>
                 <Redirect to='/'/>
