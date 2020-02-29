@@ -10,25 +10,27 @@ export default class DrinkService{
     
     getDrinks = async() => {
         let drinks = [];
+        let map = new Map();
 
-        while(drinks.length < 9){
+        while(map.size < 9){
             let cocktail = await this.getResource('/random.php');
-            drinks.push(cocktail.drinks[0]);
+            map.set(cocktail.drinks[0].idDrink,cocktail.drinks[0]);
         }
         let snapshot = await app.database().ref('users/user_' + app.auth().currentUser.uid + '/favorite/').once('value');
         if(snapshot.val){
             let favorite = snapshot.val();
                 for(let [, id] of Object.entries(favorite)){
-                    drinks.forEach((item) => {
+                    for(let item of map.values()){
                         if(item.idDrink === id){
                             item["favorite"] = true;
                         }
                         else{
                             item["favorite"] = false;
                         }
-                    })
+                    }
                 }
         }
+        for (let item of map.values()){ drinks.push(item); };
         return drinks;
     }
 

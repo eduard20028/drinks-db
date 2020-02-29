@@ -14,8 +14,8 @@ const Header = () => {
                <div className="container d-flex justify-content-between">
                         <Link className="badge" to="/"><h4>Drinks</h4></Link>
                         <div>
-                            {currentUser &&<Link to="/favorite"><FontAwesomeIcon id="icon" icon={faUser} color="#6C757D" size="lg"/></Link>}
-                            {currentUser &&<Link to="/drinks"><FontAwesomeIcon id="icon" icon={faCocktail} color="#6C757D" size="lg"/></Link>}
+                            <Link to="/favorite" hidden={!currentUser} data-toggle="tooltip" title="DRINKS"><FontAwesomeIcon className="icon" icon={faUser} color="#6C757D" size="lg"/></Link>
+                            <Link to="/drinks" hidden={!currentUser} data-toggle="tooltip" title="FAVORITE"><FontAwesomeIcon className="icon" icon={faCocktail} color="#6C757D" size="lg"/></Link>
                         </div>
                         <ul className="navbar-nav">
                             <li className="nav-item">
@@ -25,7 +25,7 @@ const Header = () => {
                                 {!currentUser &&<Link className="btn btn-secondary btn-sm" role="button" to="/sign-up">Sign Up</Link>}
                             </li>
                             <li className="nav-item">
-                                {currentUser &&<Link onClick={() => app.auth().signOut()} className="btn btn-secondary btn-sm" role="button" to="/login">SignOut</Link>}
+                                {currentUser &&<Link onClick={() => app.auth().signOut()} className="btn btn-secondary btn-sm" role="button" to="/">SignOut</Link>}
                             </li>
                         </ul>
                 </div>

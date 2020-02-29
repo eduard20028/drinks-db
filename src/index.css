@@ -29,11 +29,11 @@ a.badge-light:hover,
 body{
     background-color: #E9ECEF!important;
 }
-.header #icon{
+.header .icon{
     margin: 0 10px;
     transition: 0.3s;
 }
-.header #icon:hover{
+.header .icon:hover{
     color: #5a6268;
 }
 .card{
@@ -48,7 +48,7 @@ body{
     margin:20px;
     padding-top:15px;
 }
-.drink-items .row #icon{
+.drink-items .row .icon{
     color: white;
     margin-left: 20px;
 }
@@ -62,4 +62,15 @@ body{
 }
 .refresh i{
     padding: 6px 10px;
+}
+.tooltip{
+    margin-top:15px;
+}
+.tooltip .tooltip-inner{
+    background:#D8232A;
+    font-weight:bold;
+    font-size: 12px;
+}
+.bs-tooltip-bottom .arrow::before {
+    border-bottom-color:#D8232A!important;
 }

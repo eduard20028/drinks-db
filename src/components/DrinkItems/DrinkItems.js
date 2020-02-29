@@ -9,7 +9,6 @@ const DrinkItems = ({items, refresh, addToFavorite, page}) => {
         title = "Random Drinks"
     }
     else title = "You can add your favorite in Random Drinks";
-
     return (
         <div className="drink-items">
                 <h3 className="text-center">
@@ -27,7 +26,7 @@ const DrinkItems = ({items, refresh, addToFavorite, page}) => {
                                 <button type="button" onClick={addToFavorite} className="btn btn-danger btn-sm">
                                     {!item.favorite&&"Add to Favorite"}
                                     {item.favorite&&"Delete from Favorite"}
-                                    <i id="icon" className={item.favorite?"fa fa-star":"far fa-star"}></i>
+                                    <i className={item.favorite?"fa fa-star icon":"far fa-star icon"}></i>
                                 </button>
                                 <div className="card-body">
                                     <h5 className="card-title">{item.strDrink}</h5>
