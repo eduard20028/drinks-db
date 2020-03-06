@@ -1,76 +1,43 @@
+:root{
+    --main-color: #292929;
+    --btn-color: #24292E;
+    --icon-color: #6C757D;
+}
 button, 
 button:active, 
 button:focus, 
 .btn{
     outline: none;
     border: none!important;
+    border-radius: 0px!important;
     box-shadow: none!important;
+    background-color: var(--main-color)!important;
+    color:white!important;
 }
-.header .nav-item{
-    margin-left:10px;
+.tooltip{
+    margin-top:4px!important;
+}
+.tooltip .tooltip-inner{
+    background:var(--icon-color);
+    font-weight:bold;
+    font-size: 12px;
+}
+.bs-tooltip-bottom .arrow::before {
+    display:none;
 }
 a:hover{
     text-decoration: none!important;
 }
-a.badge-light:hover,
-:focus {
-    box-shadow: none;
-    background-color: none;
-}
-.login , .sign-up, .private-page{
-    padding: 50px 0;
-}
-.badge{
-    color: #6C757D;
-}
-.badge:hover{
-    color:#DC3545;
-}
 body{
     background-color: #E9ECEF!important;
 }
-.header .icon{
-    margin: 0 10px;
-    transition: 0.3s;
-}
-.header .icon:hover{
-    color: #5a6268;
-}
+
 .card{
     width: 18rem;
-}
-.drink-items h3{
-    margin:20px 0;
-    color: #DC3545;
-}
-.drink-items .card{
-    max-width: 300px;
-    margin:20px;
-    padding-top:15px;
-}
-.drink-items .row .icon{
-    color: white;
-    margin-left: 20px;
-}
-.drink-items button{
-    font-weight: 600;
-    font-size: 14px;
-    padding: 5px 0;
 }
 .refresh{
     padding: 15px;
 }
 .refresh i{
     padding: 6px 10px;
-}
-.tooltip{
-    margin-top:15px;
-}
-.tooltip .tooltip-inner{
-    background:#D8232A;
-    font-weight:bold;
-    font-size: 12px;
-}
-.bs-tooltip-bottom .arrow::before {
-    border-bottom-color:#D8232A!important;
 }

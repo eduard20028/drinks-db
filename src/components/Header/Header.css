@@ -1,0 +1,32 @@
+.header .navbar{
+    background-color: var(--main-color)!important;
+}
+.header .icon{
+    color:white;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+.header .icon:hover{
+    color: var(--icon-color);
+}
+.header .nav-item{
+    margin-left:10px;
+}
+.login , .sign-up, .private-page{
+    padding: 50px 0;
+}
+a.badge-light:hover,
+:focus {
+    box-shadow: none;
+    background-color: none;
+}
+.badge{
+    color: white;
+}
+.badge:hover{
+    color:white;
+}
+.navbar-nav .nav-item {
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+}

@@ -46,6 +46,26 @@ export default class DrinkService{
                 drinks.push(cocktail.drinks[0]);
             }
         }
+        
         return drinks;
+    }
+
+    getDrinkById = async(itemId) => {
+        let item = await this.getResource(`/lookup.php?i=${itemId}`);
+        let drink = [];
+        let snapshot = await app.database().ref('users/user_' + app.auth().currentUser.uid + '/favorite/').once('value');
+        if(snapshot.val){
+            let favorite = snapshot.val();
+            item.drinks[0]["favorite"] = false;
+            drink.push(item.drinks[0]);
+                for(let [, id] of Object.entries(favorite)){
+                        if(item.drinks[0].idDrink === id){
+                            item.drinks[0]["favorite"] = true;
+                            drink.push(item.drinks[0]);
+                            break;
+                        }
+                }
+        }
+        return drink[0];
     }
 }

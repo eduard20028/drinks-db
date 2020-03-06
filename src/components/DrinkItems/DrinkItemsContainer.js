@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Spinner from '../Spinner';
 import app from "../../base";
 import DrinkItems from './DrinkItems';
+import {addToFavorite} from '../../utils/utils';
 
 export class DrinkItemsContainer extends Component {
     state = { 
@@ -24,46 +25,21 @@ export class DrinkItemsContainer extends Component {
                 })
             }) 
     }
-    addToFavorite = (e) => {
-        const {user} = this.state;
-        const targetDrink = e.target.closest("div");
-        const Drink = app.database().ref('users/user_' + user.uid + '/favorite/drink_' + targetDrink.id);
-        Drink.once('value', (snapshot) => {
-                if(snapshot.val()){
-                    Drink.set({});
-                    this.toggleClass(targetDrink);
-                }
-                else if(!snapshot.val()){
-                    Drink.set(targetDrink.id);
-                    this.toggleClass(targetDrink);
-                }
-          });
-    }
-    toggleClass = (parentNode) => {
-        const classes = parentNode.querySelector('#icon').classList;
-        if(classes.contains("far")){
-            classes.remove('far');
-            classes.add('fa');
-        }
-        else if(classes.contains("fa")){
-            classes.remove('fa');
-            classes.add('far');
-        }
-    }
+    
     refresh = () => {
         this.setState({loading:true})
         this.loadItems();
     }
     render() {
         const {loading,items} = this.state;
-        const {page} = this.props;
+        const {pageTitle} = this.props;
         if(loading){
             return (
                 <div className="d-flex justify-content-center"><Spinner/></div>
             )
         }
         return (
-            <DrinkItems items={items} refresh={this.refresh} addToFavorite={this.addToFavorite} page={page}/>
+            <DrinkItems items={items} refresh={this.refresh} addToFavorite={addToFavorite} pageTitle={pageTitle}/>
         );
     }
 }

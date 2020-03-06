@@ -1,6 +1,7 @@
-import FavoriteList from './FavoriteList';
-import DrinkList from './DrinkList';
+import {FavoriteList, DrinkList} from './ItemLists';
+import ItemPage from './ItemPage';
 export {
     FavoriteList,
-    DrinkList
+    DrinkList,
+    ItemPage
 }

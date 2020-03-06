@@ -1,0 +1,22 @@
+.drink-items h3{
+    margin:20px 0;
+    color: var(--main-color);
+}
+.drink-items .card{
+    max-width: 300px;
+    margin:20px;
+    padding-top:15px;
+}
+.drink-items .row .icon{
+    color: white;
+    margin-left: 20px;
+}
+.drink-items .btn{
+    padding: 4px;
+    box-sizing: border-box;
+    border-left: solid 1px red;
+}
+.drink-items .refresh{
+    border-radius: 7px!important;
+}
+
