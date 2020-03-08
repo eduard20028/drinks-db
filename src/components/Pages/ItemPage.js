@@ -79,6 +79,7 @@ class ItemPage extends Component {
                         </dl>
                     </div>
                 </div>
+
             </div>
         );
     }

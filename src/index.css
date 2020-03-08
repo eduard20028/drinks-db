@@ -31,13 +31,6 @@ a:hover{
 body{
     background-color: #E9ECEF!important;
 }
-
-.card{
-    width: 18rem;
-}
-.refresh{
-    padding: 15px;
-}
-.refresh i{
-    padding: 6px 10px;
+.firebaseui-list-item span{
+    color: white!important;
 }

@@ -2,7 +2,19 @@ import React, {useCallback, useContext} from 'react';
 import {withRouter, Redirect} from 'react-router';
 import app from "../base";
 import {AuthContext} from "./Firebase";
+import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+import firebase from "firebase"
+
 const Login = ({history}) => {
+    const uiConfig = {
+        signInFlow: "popup",
+        signInOptions: [
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          firebase.auth.GithubAuthProvider.PROVIDER_ID
+        ]
+      }
+
     const handleLogin = useCallback(async event => {
         event.preventDefault();
         const {email, password} = event.target.elements;
@@ -36,6 +48,12 @@ const Login = ({history}) => {
                 <input name="password" type="password" className="form-control" id="exampleInputPassword1"></input>
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>
+            <div className="login-with-sn">
+                <StyledFirebaseAuth
+                    uiConfig={uiConfig}
+                    firebaseAuth={app.auth()}
+                />
+            </div>
         </form>
     </div>
     );
